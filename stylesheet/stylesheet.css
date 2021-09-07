@@ -254,9 +254,10 @@ a, .anchor-header{
 
 
 
-/*****************************      Computer Section   ****************************/
+/*****************************      Category Section   ****************************/
 .computer .computer-background,
-.mobile .mobile-background{
+.mobile .mobile-background,
+.software .software-background{
     margin-top: 70px;
     margin-bottom: 30px;
     padding: 0;
@@ -264,7 +265,8 @@ a, .anchor-header{
 }
 
 .computer .computer-background img,
-.mobile .mobile-background img{
+.mobile .mobile-background img,
+.software .software-background img{
     width: 100%;
     height: 250px;
     /* object-fit:fill; */
@@ -277,7 +279,8 @@ a, .anchor-header{
 }
 
 .computer .computer-background .section-title,
-.mobile .mobile-background .section-title{
+.mobile .mobile-background .section-title,
+.software .software-background .section-title{
     position: absolute;   
     z-index: 999;
     top: 50%;

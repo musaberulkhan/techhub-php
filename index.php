@@ -368,7 +368,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center my-5">
-            <a href="#" class="btn btn-primary all-post-btn">সকল কম্পিউটার সংক্রান্ত পোস্ট</a>
+            <a href="category.php?category=1001" class="btn btn-primary all-post-btn">সকল কম্পিউটার সংক্রান্ত পোস্ট</a>
         </div>
     </section>
 
@@ -420,10 +420,60 @@
             </div>
         </div>
         <div class="d-flex justify-content-center my-5">
-            <a href="#" class="btn btn-primary all-post-btn">সকল মোবাইল সংক্রান্ত পোস্ট</a>
+            <a href="category.php?category=1002" class="btn btn-primary all-post-btn">সকল মোবাইল সংক্রান্ত পোস্ট</a>
         </div>
     </section>
 
+
+     <!-- ------------------------------------------------------------------------------------------------------
+                                                Software Section
+    ----------------------------------------------------------------------------------------------------------->
+    <section class="software" id="software">
+        <div class="container-fluid software-background">
+            <img src="images/software-section-bg.jpg" class="img-fluid" alt="">
+            <h1 class="section-title">সফটওয়্যার</h1>
+        </div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <?php 
+                            $showAllPostSQL = "SELECT TN.`id`, TN.`title`, TN.`description`, TN.`image`, TN.`views`, AU.name, CT.category FROM `technews` AS TN INNER JOIN author AS AU ON TN.author = AU.id INNER JOIN category AS CT ON TN.category=CT.id WHERE TN.category='1003' ORDER BY id DESC LIMIT 8;";
+                            $runAllPostQuery = mysqli_query($conn, $showAllPostSQL);
+
+                            if($runAllPostQuery==true){                       
+                                while($my_data = mysqli_fetch_array($runAllPostQuery)){
+                             ?>
+
+                <div class="col px-md-2 px-4">
+                    <a href="post.php?id=<?php echo $my_data["id"];?>">
+                        <div class="card h-100 post-card">
+                            <img src="uploads/<?php echo $my_data["image"];?>" class="img-fluid card-img-top" alt="...">
+                            <div class="card-body post-body">
+                                <h6 class="card-title pt-2"><?php echo $my_data["title"];?></h6>
+                            </div>
+                            <div class="card-footer post-footer">
+                                <div class="author-views">
+                                    <div class="author">
+                                        <p><i class="fas fa-user"></i><?php echo $my_data["name"];?></p>
+                                    </div>
+                                    <div class="views">
+                                        <p><i class="fas fa-eye"></i><?php  echo "Views: ".$my_data["views"];?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php
+                                }
+                            }
+                    ?>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center my-5">
+            <a href="category.php?category=1003" class="btn btn-primary all-post-btn">সকল সফটওয়্যার সংক্রান্ত পোস্ট</a>
+        </div>
+    </section>
 
 
     <?php 
