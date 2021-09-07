@@ -1,0 +1,188 @@
+body{
+    margin: 0;     
+    overflow-x: hidden;  
+}
+
+
+/********************         Side bar         ************************/
+.sidebar{
+    width: 100%;
+    height: 100vh;
+    background-color: #292929;
+}
+
+.sidebar .logo{
+    padding: 40px 15px;
+    
+}
+
+.sidebar .logo img{
+    width: 50px;
+}
+
+.sidebar .logo h3{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: azure;
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin-bottom: 12px;
+    
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: azure;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover{
+    color: rgb(144, 188, 255);
+}
+
+.sidebar ul li a i{
+    margin-right: 8px;
+    width: 22px;    
+}
+
+
+/**************************************************************************************************
+                                        Dashboard
+**************************************************************************************************/
+.side{
+    width: 225px;
+    background-color: blanchedalmond;
+    position:fixed;    
+}
+
+.main-body{
+    margin-left: 225px;
+}
+
+
+
+
+
+
+
+/**************************************************************************************************
+                                        New Post
+**************************************************************************************************/
+.newPost form div{
+    margin: 10px;
+}
+
+.newPost form div label{
+    font-weight: 600;
+    font-size: 18px;    
+}
+
+.newPost form input[type=text],
+.newPost form textarea{
+    width: 100%; 
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.newPost form select{
+    padding: 2px 20px 2px 10px;
+    border: 1px solid rgb(160, 160, 160); 
+    border-radius: 5px;   
+    margin-top: 5px;
+}
+
+.newPost form textarea{
+    width: 100%;
+    height: 45vh;
+    resize: none;
+}
+
+
+
+/**************************************************************************************************
+                                        All Post
+**************************************************************************************************/
+.allpost-table{
+    width: 100%;
+}
+
+.allpost-table th{
+    text-align: center;
+}
+
+.allpost-table th,td{
+    padding: 3px 8px;
+    border: 1px solid lightgray;
+}
+
+.allpost-table .thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.allpost-table .thumbnail img{
+    height:60px; 
+    width:85px;
+    
+}
+
+.allpost-table .action{
+    width: 100px; 
+    text-align: center;
+    font-size: 20px;   
+}
+
+.allpost-table .action i{    
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(78, 78, 78);
+    transition: all 0.3s ease;    
+}
+
+.allpost-table .action a:hover i{
+    color: rgb(190, 76, 0); 
+}
+
+
+/**************************************************************************************************
+                                        Delete Post
+**************************************************************************************************/
+.delete-post {
+    text-align: center;
+}
+
+.delete-post button{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 25px;
+    margin: 20px 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.delete-post button.yes{
+    background-color: #73ff9a;
+}
+
+
+.delete-post button.yes:hover{
+    background-color: #40ff76;
+}
+
+.delete-post button.no{
+    background-color: #ff7161;
+}
+
+
+.delete-post button.no:hover{
+    background-color: #ff4e3a;
+}

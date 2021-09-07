@@ -1,0 +1,363 @@
+body{
+    margin: 0!important;
+    padding: 0!important;
+    box-sizing: border-box!important;
+    overflow-x: hidden;
+}
+
+
+a, .anchor-header{
+    text-decoration: none!important;
+}
+
+.container{
+    margin-top: 15px;
+}
+
+
+/*********************************************************************************/
+/*********************************************************************************/
+/******************                 Home Page           **************************/
+
+.all-post-btn{
+    background-color: transparent;
+    color: black;
+    border: 1px solid darkslategrey;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.all-post-btn:hover{
+    background-color: darkslategrey;
+    border: 1px solid darkslategrey;    
+}
+
+
+
+
+
+/*****************************      Featured Post     ****************************/
+.featured-post-card{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: black;     
+}
+
+.featured-post-card button{
+    border: 0;
+    padding: 10px 20px;
+    background-color: #ffc88a;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.featured-post-body h4{
+    font-weight: 600;
+    
+}
+
+.featured-post-body p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.featured-post-card h4:hover,
+.featured-post-card p:hover{
+    color: rgb(99, 0, 0)!important;
+}
+
+.featured-post-card button:hover{
+    background-color: #ffb259;
+    cursor: pointer;
+}
+
+.featured-post-thumbnail img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*****************************      Regular Post     ****************************/
+.post{
+    padding-bottom: 20px;
+}
+
+.post-card{       
+    border: 0px;      
+    border-radius: 5px;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.post-card img{    
+    border-radius: 5px 5px 0px 0;  
+    height: 170px;    
+}
+
+.post-body{   
+    padding: 8px 10px;
+    color: black;
+    display: flex;    
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.post-footer{
+    border: none;
+    background-color: transparent;
+    padding-bottom: 15px;
+}
+
+.post-footer p{
+    margin-top: 0;
+    font-size: 12px;
+    margin-bottom: 0;       
+}
+
+.post-footer .author-views{
+    display: flex;
+    margin-top: 3px;
+    justify-content: space-between;
+}
+
+.post-footer .author-views .author{   
+    font-weight: 700!important;
+    color: rgb(63, 63, 63);
+}
+
+
+.post-footer .author-views .author i{
+    margin-right: 7px;
+    font-size: 12px;
+    color: rgb(141, 59, 0);
+}
+
+
+.post-footer .author-views .views{    
+    color: rgb(63, 63, 63);
+}
+
+.post-footer .author-views .views i{
+    margin-right: 5px;
+    font-size: 12px;
+    color: rgb(141, 59, 0);
+}
+
+
+
+
+
+
+
+/*****************************      Most Views   ****************************/
+.most-views-title{
+    font-weight: 600;
+}
+
+.most-views-title::after{
+    content: "";
+    background-color: #ffb259;
+    display: block;
+    height: 2px;
+    width: 120px;
+    margin-top: 6px;
+    margin-bottom: 20px;    
+}
+
+
+
+
+
+
+/*****************************      Top Tech Masters   ****************************/
+.top-techmasters{
+    margin-top: 80px;  
+     
+}
+
+.top-techmasters .top-techmasters-title{
+    display: flex;
+    justify-content: center;
+}
+
+.top-techmasters h1{
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;    
+}
+
+.top-techmasters .top-techmasters-title h1 span{
+    color: #cc791b;
+}
+
+.top-techmasters .top-techmasters-title h1::after{
+    content: "";
+    background-color: #ffb259;
+    display: block;
+    height: 4px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;    
+}
+
+
+.top-techmasters .techmaster-list{    
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.top-techmasters .techmaster-list table tr td{
+    padding: 15px 5px!important;
+   
+}
+
+.top-techmasters .techmaster-list .fa-crown{
+    font-size: 25px;   
+}
+
+.top-techmasters .techmaster-list .techmaster{
+    display: flex;
+    align-items: center;   
+}
+
+.top-techmasters .techmaster-list .techmaster .techmaster-image img{
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top-techmasters .techmaster-list .techmaster .techmaster-details h5{
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.top-techmasters .techmaster-list .techmaster .techmaster-details p{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.top-techmasters .techmaster-list .techmaster .techmaster-details p span{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+/*****************************      Computer Section   ****************************/
+.computer .computer-background,
+.mobile .mobile-background{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 0;
+    position: relative;
+}
+
+.computer .computer-background img,
+.mobile .mobile-background img{
+    width: 100%;
+    height: 250px;
+    /* object-fit:fill; */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.computer .computer-background .section-title,
+.mobile .mobile-background .section-title{
+    position: absolute;   
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 242, 221);
+    font-size: 60px;
+    font-weight: 800;
+    border: 5px solid white;
+    padding: 10px 25px;
+}
+
+
+
+
+
+
+/*********************************************************************************/
+/*********************************************************************************/
+/******************                 Post Page           **************************/
+
+.post-details p{
+    margin: 0;
+}
+
+.post-details p i{
+    margin-right: 5px;
+}
+
+.post-details p span{
+    font-weight: 600;
+}
+
+.post-details img{
+    width: 70%;
+    margin: 20px 15%;
+}
+
+.post-details .description{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.similar-post{
+    margin-top: 30px;
+    padding-top: 8px;    
+    text-align: center;
+    border-top: 1px solid grey;
+}
+
+.similar-post h5{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+
+
+/********************************************************************************************
+                        Responsive Media Query
+*******************************************************************************************/
+
+@media only screen and (min-width: 1400px) {
+    /* For mobile phones: */    
+    .post-card img{
+        height: 200px;    
+    }
+
+    .computer .computer-background img,
+    .mobile .mobile-background img{   
+    height: 300px;    
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */    
+    .post-card img{
+        height: 300px;    
+    }
+}

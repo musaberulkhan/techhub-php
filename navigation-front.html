@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-bottom: 40px;
+      background-color: white!important;
+    }
+
+    .navbar-brand {
+      font-size: 24px !important;
+      font-weight: 700;
+    }
+
+    .search-button {
+      border: 0;
+      padding: 5px 15px;
+      margin-left: 5px;
+      background-color: #e8f28f;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .search-button:hover {
+      cursor: pointer;
+      background-color: #edff48;
+    }
+
+    .nav-item {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    .nav-item a:hover{
+      color: black;
+    }
+
+    .nav-item i {
+      margin-right: 5px;
+    }
+
+    .navbar-text input[type=text] {
+      border: 1px solid lightgray;
+      padding: 3px 10px;
+      border-radius: 10px;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+
+      /* For mobile phones: */
+      .navbar {
+        padding-left: 40px;
+        padding-right: 30px;
+      }
+
+      .navbar-brand {
+        font-size: 21px !important;
+      }
+      .navbar-brand img{
+        width: 50px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">     
+      <a class="navbar-brand d-flex align-items-center" href="index.php"><img class="me-2 img-fluid" src="images/fav-icon.png" alt="">Tech Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i>হোম</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#computer"><i class="fas fa-desktop"></i>কম্পিউটার</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#mobile"><i class="fas fa-mobile-alt"></i>মোবাইল</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#software"><i class="fas fa-file-code"></i>সফটওয়্যার</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#gadget"><i class="fas fa-vr-cardboard"></i>গ্যাজেট</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#tutorial"><i class="fas fa-chalkboard"></i>টিউটোরিয়াল</a>
+          </li>
+         
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
