@@ -63,27 +63,61 @@
                     if($runShowLastPostQuery==true){                                                
                         while($my_data = mysqli_fetch_array($runShowLastPostQuery)){
                         ?>
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top p-3" src="uploads/<?php echo $my_data["image"] ?>" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $my_data["title"] ?></h5>
-                                    <p class="card-text"><?php echo substr($my_data["description"],0, strpos($my_data["description"], ' ', 200))."......"; ?></p>
-                                    <p class="card-text"><i class="fas fa-eye"></i> Views: <?php echo $my_data["views"] ?></p>                                    
-                                    <a href="post.php?id=<?php echo $my_data["id"] ?>" class="btn btn-warning w-100">View Post</a>
-                                </div>
-                            </div>
-                        <?php
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top p-3" src="uploads/<?php echo $my_data["image"] ?>" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $my_data["title"] ?></h5>
+                        <p class="card-text">
+                            <?php echo substr($my_data["description"],0, strpos($my_data["description"], ' ', 200))."......"; ?>
+                        </p>
+                        <p class="card-text"><i class="fas fa-eye"></i> Views: <?php echo $my_data["views"] ?></p>
+                        <a href="post.php?id=<?php echo $my_data["id"] ?>" class="btn btn-warning w-100">View Post</a>
+                    </div>
+                </div>
+                <?php
                         }
                     }
-                    ?>
+                ?>
 
 
             </div>
             <div class="col-md-4 col-sm-12 col-12">
-                <h3>Analytics</h3>
+                <?php
+                    $getAnalyticsSQL = "SELECT SUM(views) AS totalviews, COUNT(id) AS totalpost FROM `technews` WHERE `author`='".$LOGGEDUSER_Id."'";
+                    $runGetAnalyticsQuery = mysqli_query($conn, $getAnalyticsSQL);
+
+                    if($runGetAnalyticsQuery==true){ 
+                        $crown_increment = 0;                      
+                        while($my_data = mysqli_fetch_array($runGetAnalyticsQuery)){
+                            $totalViews = $my_data["totalviews"];
+                            $totalPost = $my_data["totalpost"];                            
+                        }
+                    }
+                ?>
+                
+                <h3 class="mb-3">Analytics</h3>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top px-5 py-4" src="images/analytics.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Views: <?php echo $totalViews;?></h5>
+                        <hr>                       
+                        <h5 class="card-title">Total Post: <?php echo $totalPost;?></h5>    
+                    </div>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12 col-12">
-                <h3>Trips and Tricks</h3>
+                <h3 class="mb-3">Trips and Tricks</h3>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top p-3" src="images/increase-views.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">কিভাবে ভিউ বাড়ানো যেতে পারে?</h5>
+                        <p style="text-align: justify; text-justify: inter-word;" class="card-text pb-3">
+                            ভিউ বাড়ানোর জন্য প্রথমে ভিডিও গুলো মানুষের কাছে প্রচার করতে হবে। কারণ যখন কেই আপনার
+                            ভিডিওর ব্যাপারে জানবে তখন তারা আপনার তৈরি করা ভিডিও গুলো দেখবে। এজন্য আপনার চ্যানেলে আপলোড
+                            করা প্রতিটা ভিডিওর ভিউ বানানোর জন্য পৃথীবির দ্বিতীয় বোরো সার্চ ইঞ্জিন কাজে আসবে।
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
