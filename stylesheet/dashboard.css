@@ -65,6 +65,17 @@ body{
     margin-left: 225px;
 }
 
+.dashboard-title::after{
+    margin-right: auto;
+    margin-left: 0;    
+    margin-top: 5px;   
+    content:"";    
+    display: block;
+    height: 2px;    
+    width: 160px;        
+    border-top: 4px solid #E76F51;
+}
+
 
 
 

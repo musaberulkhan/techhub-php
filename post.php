@@ -68,36 +68,34 @@
 
         <div class="similar-post">
             <h5>এ সম্পর্কিত আরও পড়ুন</h5>
-            <div class="row">
-                <?php
-                    
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <?php                    
                     $showSimilarPostSQL = "SELECT TN.`id`, TN.`title`, TN.`description`, TN.`image`, TN.`views`, AU.name, CT.category FROM `technews` AS TN INNER JOIN author AS AU ON TN.author = AU.id INNER JOIN category AS CT ON TN.category=CT.id WHERE CT.category='$Category' LIMIT 8;";
                     $runSimilarPostQuery = mysqli_query($conn, $showSimilarPostSQL);
 
                     if($runSimilarPostQuery==true){                       
                         while($my_data = mysqli_fetch_array($runSimilarPostQuery)){
                         ?>
-                <div class="post col-md-3">
-                    <a href="post.php?id=<?php echo $my_data["id"];?>">
-                        <div class="post-card">
-                            <div class="post-thumbnail">
-                                <img class="card-img-top" src="uploads/<?php echo $my_data["image"];?>" alt="">
+                        <div class="post col-md-3">
+                            <a href="post.php?id=<?php echo $my_data["id"];?>">
+                            <div class="card h-100 post-card">
+                            <img src="uploads/<?php echo $my_data["image"];?>" class="img-fluid card-img-top" alt="...">
+                            <div class="card-body post-body">
+                                <h6 class="card-title pt-2"><?php echo $my_data["title"];?></h6>
                             </div>
-                            <div class="post-body">
-                                <h6><?php echo $my_data["title"];?></h6>
+                            <div class="card-footer post-footer">
                                 <div class="author-views">
                                     <div class="author">
                                         <p><i class="fas fa-user"></i><?php echo $my_data["name"];?></p>
                                     </div>
                                     <div class="views">
-                                        <p><i class="fas fa-eye"></i><?php echo "Views: ".$my_data["views"];?></p>
+                                        <p><i class="fas fa-eye"></i><?php  echo "Views: ".$my_data["views"];?>
+                                        </p>
                                     </div>
-
                                 </div>
-
                             </div>
-                        </div>
-                    </a>
+                            </div>                           
+                            </a>
 
                 </div>
                 <?php }
