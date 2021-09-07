@@ -101,7 +101,7 @@
 
                 </div>
                 <div class="d-flex justify-content-center my-5">
-                    <a href="#" class="btn btn-primary all-post-btn">সকল পোস্ট</a>
+                    <a href="category.php" class="btn btn-primary all-post-btn">সকল পোস্ট</a>
                 </div>
             </div>
 
